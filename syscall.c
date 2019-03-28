@@ -103,6 +103,8 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+extern int sys_wcupa(void);// added function prototype for sys_wcupa system call
+extern int sys_getreadcount(void); //added sys_getreadcount prototype
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -126,6 +128,8 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+[SYS_wcupa]   sys_wcupa, //added a pointer for sys_wcupa system call
+[SYS_getreadcount] sys_getreadcount, //added a pointer for sys_getreadcount system call
 };
 
 void

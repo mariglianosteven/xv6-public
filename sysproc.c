@@ -89,3 +89,9 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+//added system call function for sys_wcupa system call
+int
+sys_wcupa(void)
+{
+  return 1871;
+}

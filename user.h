@@ -23,6 +23,8 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int wcupa(void); //added  a function decleration for the  sys_wcupa function call
+int getreadcount(void); //added a function decleration for the getreatcount sys_getreadcount function call
 
 // ulib.c
 int stat(const char*, struct stat*);
